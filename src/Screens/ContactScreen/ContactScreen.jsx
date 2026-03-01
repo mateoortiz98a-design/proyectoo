@@ -5,7 +5,7 @@ import { ContactsContext } from '../../Context/ContactsContext'
 import './ContactScreen.css'
 import { useState } from 'react'
 import InfoContact from '../../Components/InfoContact/infoContact'
-import MenuSidebar from '../../Components/menuSide/MenuSidebar/menuSidebar'
+import MenuSidebar from '../../Components/menuSide/menuSidebar/menuSidebar'
 import Chat from '../../Components/chat/chat'
 export default function ContactScreen() {
     const { contacts } = useContext(ContactsContext)

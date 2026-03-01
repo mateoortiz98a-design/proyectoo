@@ -1,0 +1,316 @@
+/* ══════════════════════════════════════
+   setting.css — WhatsApp Web Settings
+══════════════════════════════════════ */
+
+.settings_container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f0f2f5;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    flex: 1;
+    min-width: 0;
+}
+
+/* ══════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════ */
+.settings_sidebar {
+    width: 420px;
+    min-width: 320px;
+    max-width: 420px;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e9edef;
+    overflow-y: auto;
+    scrollbar-width: none;
+    flex-shrink: 0;
+}
+
+.settings_sidebar::-webkit-scrollbar { display: none; }
+
+.settings_title {
+    font-size: 19px;
+    font-weight: 600;
+    color: #111b21;
+    padding: 20px 24px 10px;
+    flex-shrink: 0;
+}
+
+/* Buscador */
+.settings_search {
+    position: relative;
+    padding: 4px 16px 10px;
+    flex-shrink: 0;
+}
+
+.settings_search__icon {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-56%);
+    color: #8696a0;
+    pointer-events: none;
+}
+
+.settings_search input {
+    width: 100%;
+    height: 38px;
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 8px;
+    padding: 0 16px 0 38px;
+    font-size: 14px;
+    color: #111b21;
+    outline: none;
+    font-family: inherit;
+}
+
+.settings_search input::placeholder { color: #8696a0; }
+.settings_search input:focus { background-color: #e9edef; }
+
+/* Perfil */
+.settings_profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 20px 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f2f5;
+    border-top: 1px solid #f0f2f5;
+    transition: background 0.15s;
+    flex-shrink: 0;
+    margin-bottom: 4px;
+}
+
+.settings_profile:hover { background-color: #f5f6f6; }
+
+.settings_profile img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.settings_profile__info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.settings_profile__name {
+    font-size: 17px;
+    font-weight: 500;
+    color: #111b21;
+}
+
+.settings_profile__about {
+    font-size: 13px;
+    color: #8696a0;
+}
+
+/* Nav */
+.settings_nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.settings_nav__item {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 13px 20px;
+    cursor: pointer;
+    transition: background 0.15s;
+    border-bottom: 1px solid #f5f6f6;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.settings_nav__item:hover { background-color: #f5f6f6; }
+.settings_nav__item--active { background-color: #f0f2f5; }
+
+.settings_nav__icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #54656f;
+    flex-shrink: 0;
+}
+
+.settings_nav__item--active .settings_nav__icon {
+    background-color: #e7f7f3;
+    color: #00a884;
+}
+
+.settings_nav__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.settings_nav__label {
+    font-size: 15px;
+    color: #111b21;
+}
+
+.settings_nav__desc {
+    font-size: 13px;
+    color: #8696a0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Cerrar sesión */
+.settings_logout {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    cursor: pointer;
+    color: #f15c6d;
+    font-size: 15px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    border-top: 1px solid #f0f2f5;
+    transition: background 0.15s;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.settings_logout:hover { background-color: #fff5f5; }
+.settings_logout svg { color: #f15c6d; flex-shrink: 0; }
+
+/* ══════════════════════════════════════
+   PANEL DERECHO
+══════════════════════════════════════ */
+.settings_content {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f5;
+    overflow: hidden;
+}
+
+.settings_content__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    color: #8696a0;
+    user-select: none;
+}
+
+.settings_content__empty svg { opacity: 0.5; }
+
+.settings_content__empty p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #41525d;
+}
+
+.settings_content__inner {
+    max-width: 600px;
+    width: 100%;
+    padding: 32px;
+}
+
+.settings_content__inner h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111b21;
+    margin-bottom: 8px;
+}
+
+.settings_content__inner p {
+    font-size: 14px;
+    color: #8696a0;
+}
+
+/* ══════════════════════════════════════
+   MOBILE (< 650px)
+══════════════════════════════════════ */
+@media (max-width: 650px) {
+
+    .settings_container {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 100;
+        padding-bottom: 60px;
+        box-sizing: border-box;
+    }
+
+    /* Sidebar ocupa toda la pantalla */
+    .settings_sidebar {
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e9edef;
+        overflow-y: visible;
+        flex-shrink: 0;
+    }
+
+    /* Ocultar panel derecho en mobile (no hay espacio) */
+    .settings_content {
+        display: none;
+    }
+
+    /* Items más compactos */
+    .settings_nav__item {
+        padding: 12px 16px;
+    }
+
+    .settings_nav__desc {
+        display: none;
+    }
+
+    .settings_nav__icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .settings_title {
+        padding: 16px 16px 8px;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .settings_profile {
+        padding: 12px 16px;
+    }
+
+    .settings_logout {
+        padding: 14px 16px;
+    }
+
+    /* Espacio para barra mobile inferior */
+    .settings_sidebar {
+        padding-bottom: 70px;
+    }
+}

@@ -1,0 +1,128 @@
+/* ── Menu Sidebar ── */
+.menu_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 66px;
+    min-width: 66px;
+    height: 100vh;        /* ← era 100%, cambiado a 100vh */
+    max-height: 100vh;    /* ← nuevo: evita desborde */
+    background-color: #f7f5f3;
+    padding: 16px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 10;
+    flex-shrink: 0;       /* ← nuevo: no se achica */
+    position: sticky;     /* ← nuevo: queda fijo al scroll */
+    top: 0;
+}
+
+.menu_sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: #8696a0;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.menu_sidebar a:hover {
+    background-color: #ece3da;
+    color: #303131;
+}
+
+.menu_sidebar a.active {
+    color: #00a884;
+}
+
+.menu_sidebar a svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+/* Foto de perfil */
+.menu_sidebar a img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.menu_sidebar a:has(img):hover {
+    background-color: transparent;
+}
+
+.menu_sidebar a:has(img):hover img {
+    border-color: #00a884;
+}
+
+/* Agrupadores internos del sidebar */
+.menu_sidebar__icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.menu_sidebar__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Separador entre íconos y bottom */
+.menu_sidebar__icons::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: #2a3942;
+    margin-top: 8px;
+}
+
+/* ── Home Screen ── */
+.home_screen {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    max-height: 100vh;    /* ← nuevo */
+    overflow: hidden;
+    background-color: #111b21;
+}
+
+/* Panel lateral de contactos */
+.sidebar {
+    flex-shrink: 0;
+}
+
+/* Área principal del chat */
+.home_chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-color: #f7f5f3;
+}
+
+.home_chat h1 {
+    color: #303131;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.home_chat p {
+    color: #8696a0;
+    font-size: 14px;
+}

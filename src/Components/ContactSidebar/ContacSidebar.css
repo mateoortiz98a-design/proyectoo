@@ -1,0 +1,93 @@
+
+.sidebar {
+    width: 30%;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+}
+
+
+.sidebar_header {
+    padding: 16px;
+    background-color: white;
+    height: 59px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar_header h2 {
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111b21;
+    height: 50px;
+    align-items: center;
+}
+
+.contacts_list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+
+.contact_item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.2s ease;
+}
+
+.contact_item:hover {
+    background-color: #f5f6f6;
+}
+
+.contact_item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border-color: rgb(2, 107, 107);
+    
+}
+
+
+.contact_info {
+    flex: 1;
+    margin-left: 12px;
+    border-bottom: 1px solid #f0f2f5;
+    padding-bottom: 12px;
+}
+
+
+.contact_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact_top h4 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contact_top span {
+    font-size: 12px;
+    color: #667781;
+}
+
+
+.contact_info p {
+    font-size: 13px;
+    color: #667781;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

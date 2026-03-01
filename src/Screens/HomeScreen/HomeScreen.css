@@ -1,0 +1,18 @@
+.home_screen {
+    display: flex;
+    flex-direction: row;
+    background-color: #f0f2f5;
+    height: 100vh;        /* ← era 100%, cambiado a 100vh */
+    max-height: 100vh;    /* ← nuevo: evita desborde */
+    overflow: hidden;     /* ← nuevo: corta cualquier hijo que se pase */
+}
+
+.home_chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;              /* ← ocupa el espacio restante */
+    background-color: #f7f5f3;
+    overflow: hidden;
+}

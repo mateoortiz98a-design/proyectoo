@@ -1,0 +1,110 @@
+.menu_mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .menu_mobile {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #ffffff;
+        border-top: 1px solid #e9edef;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+        z-index: 9999;
+        align-items: stretch;
+        padding-bottom: env(safe-area-inset-bottom);
+        box-sizing: border-box;
+    }
+
+    /* Ocultar menu_sidebar vertical en mobile */
+    .menu_sidebar {
+        display: none !important;
+    }
+
+    /* Tab individual */
+    .menu_mobile__tab {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        text-decoration: none;
+        color: #8696a0;
+        font-size: 10.5px;
+        font-weight: 500;
+        font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+        position: relative;
+        transition: color 0.15s, background 0.1s;
+        padding: 6px 0 4px;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+    }
+
+    .menu_mobile__tab:active {
+        background-color: #f0f2f5;
+    }
+
+    /* Tab activo */
+    .menu_mobile__tab--active {
+        color: #00a884;
+    }
+
+    /* Ícono */
+    .menu_mobile__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu_mobile__icon svg {
+        width: 22px;
+        height: 22px;
+        transition: transform 0.15s;
+    }
+
+    .menu_mobile__tab--active .menu_mobile__icon svg {
+        transform: scale(1.1);
+    }
+
+    /* Label */
+    .menu_mobile__label {
+        line-height: 1;
+        letter-spacing: 0.1px;
+        white-space: nowrap;
+    }
+
+    /* Indicador verde arriba del tab activo */
+    .menu_mobile__indicator {
+        position: absolute;
+        top: 0;
+        left: 15%;
+        width: 70%;
+        height: 2.5px;
+        background-color: #00a884;
+        border-radius: 0 0 3px 3px;
+        animation: indicatorIn 0.2s ease;
+    }
+
+    @keyframes indicatorIn {
+        from {
+            transform: scaleX(0);
+            opacity: 0;
+        }
+
+        to {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+    }
+
+    /* Espacio para que el contenido no quede tapado por la barra */
+    #root>div {
+        padding-bottom: 60px;
+    }
+}

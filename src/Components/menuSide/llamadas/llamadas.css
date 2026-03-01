@@ -1,0 +1,363 @@
+/* ══════════════════════════════════════
+   Llamadas.css
+══════════════════════════════════════ */
+
+.llamadas_screen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    position: relative;
+    flex: 1;
+}
+
+/* ── Header ── */
+.llamadas_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 58px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f2f5;
+    flex-shrink: 0;
+}
+
+.llamadas_header__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111b21;
+    letter-spacing: -0.3px;
+}
+
+.llamadas_header__actions {
+    display: flex;
+    gap: 4px;
+}
+
+.llamadas_header__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #54656f;
+    transition: background 0.15s;
+}
+
+.llamadas_header__btn:hover {
+    background-color: #f0f2f5;
+}
+
+/* ── Botón crear enlace ── */
+.llamadas_link_btn {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f0f2f5;
+    transition: background 0.15s;
+    flex-shrink: 0;
+}
+
+.llamadas_link_btn:hover {
+    background-color: #f5f6f6;
+}
+
+.llamadas_link_icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #00a884;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.llamadas_link_text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.llamadas_link_text span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #111b21;
+}
+
+.llamadas_link_text small {
+    font-size: 13px;
+    color: #8696a0;
+}
+
+/* ── Etiqueta sección ── */
+.llamadas_section_label {
+    padding: 10px 16px 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #667781;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* ── Lista ── */
+.llamadas_list {
+    flex: 1;
+    overflow-y: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+
+.llamadas_list::-webkit-scrollbar { display: none; }
+
+/* ── Item ── */
+.llamadas_item {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+    animation: fadeSlideIn 0.3s ease both;
+}
+
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.llamadas_item:hover {
+    background-color: #f5f6f6;
+}
+
+.llamadas_item__avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.llamadas_item__body {
+    flex: 1;
+    min-width: 0;
+    border-bottom: 1px solid #f0f2f5;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.llamadas_item:last-child .llamadas_item__body {
+    border-bottom: none;
+}
+
+.llamadas_item__name {
+    font-size: 16px;
+    font-weight: 400;
+    color: #111b21;
+    text-transform: capitalize;
+}
+
+.llamadas_item__name--missed {
+    color: #ff3b30;
+}
+
+.llamadas_item__meta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.llamadas_item__info {
+    font-size: 13px;
+    color: #667781;
+}
+
+.llamadas_item__info--missed {
+    color: #ff3b30;
+}
+
+/* Botón llamar */
+.llamadas_item__call_btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00a884;
+    transition: background 0.15s;
+    flex-shrink: 0;
+}
+
+.llamadas_item__call_btn:hover {
+    background-color: #f0f2f5;
+}
+
+/* ── FAB ── */
+.llamadas_fab {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #00a884;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 168, 132, 0.45);
+    transition: background 0.2s, transform 0.15s;
+}
+
+.llamadas_fab:hover {
+    background-color: #017561;
+    transform: scale(1.06);
+}
+
+.llamadas_fab:active {
+    transform: scale(0.96);
+}
+
+/* ══════════════════════════════════════
+   MODAL LLAMADA ACTIVA
+══════════════════════════════════════ */
+.llamadas_modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.llamadas_modal__card {
+    background: linear-gradient(160deg, #1a2c35 0%, #111b21 100%);
+    border-radius: 20px;
+    padding: 40px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 300px;
+    max-width: 92vw;
+    animation: scaleIn 0.22s ease;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.88); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+.llamadas_modal__avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.15);
+    box-shadow: 0 0 0 8px rgba(0, 168, 132, 0.15);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 8px rgba(0, 168, 132, 0.15); }
+    50%       { box-shadow: 0 0 0 16px rgba(0, 168, 132, 0.05); }
+}
+
+.llamadas_modal__name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 4px;
+}
+
+.llamadas_modal__status {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.3px;
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
+}
+
+.llamadas_modal__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.llamadas_modal__btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s, opacity 0.15s;
+}
+
+.llamadas_modal__btn:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.llamadas_modal__btn:active {
+    transform: scale(0.95);
+}
+
+.llamadas_modal__btn--mute {
+    background-color: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+.llamadas_modal__btn--end {
+    background-color: #ff3b30;
+    color: #fff;
+    width: 68px;
+    height: 68px;
+}
+
+.llamadas_modal__btn--video {
+    background-color: rgba(255,255,255,0.15);
+    color: #fff;
+}

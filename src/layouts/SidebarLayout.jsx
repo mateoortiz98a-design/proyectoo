@@ -1,6 +1,6 @@
 
 
-import MenuSidebar from '../Components/menuSide/MenuSidebar/menuSidebar'
+import MenuSidebar from "../Components/menuSide/menuSidebar/menuSidebar";
 
 export default function SidebarLayout({ children }) {
     return (

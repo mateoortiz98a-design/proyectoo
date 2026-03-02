@@ -25,9 +25,7 @@ export default function ContactScreen() {
                     <h1>El contacto seleccionado no existe</h1>
                 </div>
 
-                // ✅ Siempre tiene home_chat_contact--visible
-                // En desktop no importa porque el chat no está fixed
-                // En mobile hace el slide y tapa el menu
+               
                 : <div className='home_chat_contact home_chat_contact--visible'>
 
                     <div className='home_chat_header'>

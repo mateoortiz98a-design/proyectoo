@@ -1,3 +1,5 @@
+
+/*/ aiService.js
 const API_KEY = import.meta.env.VITE_ANTHROPIC_API_KEY
 
 export async function getAIResponse(contact, messages, userMessage) {
@@ -30,4 +32,20 @@ Máximo 2-3 oraciones por respuesta.`,
 
     const data = await response.json()
     return data.content[0].text
+} */
+export async function getAIResponse(contact, messages, userMessage) {
+  const response = await fetch('/api/chat', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      contact,
+      messages,
+      userMessage
+    })
+  });
+
+  const data = await response.json();
+  return data.reply;
 }

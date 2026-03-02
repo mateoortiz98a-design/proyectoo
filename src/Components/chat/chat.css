@@ -1,6 +1,4 @@
-/* ══════════════════════════════════════
-   Chat.css
-══════════════════════════════════════ */
+
 
 .chat_wrapper {
     display: flex;
@@ -11,7 +9,7 @@
     min-height: 0;
 }
 
-/* ── Área de mensajes ── */
+
 .chat_contact {
     flex: 1;
     overflow-y: auto;
@@ -31,7 +29,7 @@
     border-radius: 3px;
 }
 
-/* ── Burbujas ── */
+
 .message {
     max-width: 65%;
     padding: 6px 12px 8px 12px;
@@ -70,7 +68,7 @@
     white-space: nowrap;
 }
 
-/* ── Formulario ── */
+
 .chat_wrapper form {
     display: flex;
     align-items: center;
@@ -123,7 +121,7 @@
     background-color: #017561;
 }
 
-/* ── Mobile ── */
+
 @media (max-width: 650px) {
     .chat_contact {
         padding: 8px 12px;

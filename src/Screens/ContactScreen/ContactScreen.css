@@ -1,12 +1,8 @@
-/* ══════════════════════════════════════
-   ContactScreen.css
-══════════════════════════════════════ */
-
 .mobile_back_btn {
     display: none;
 }
 
-/* ── ZONA DE CHAT ── */
+
 .home_chat_contact {
     display: flex;
     flex-direction: column;
@@ -18,7 +14,7 @@
     background-repeat: repeat;
 }
 
-/* ── HEADER ── */
+
 .home_chat_header {
     position: relative;
     display: flex;
@@ -79,7 +75,7 @@
         min-width: unset !important;
     }
 
-    
+
     .home_chat_contact {
         position: fixed !important;
         top: 0;
@@ -97,7 +93,7 @@
         transform: translateX(0) !important;
     }
 
-   
+
     .mobile_back_btn {
         display: flex;
         width: 38px;
@@ -137,6 +133,7 @@
     .home_chat {
         display: none !important;
     }
+
     .volver {
         display: none !important;
     }

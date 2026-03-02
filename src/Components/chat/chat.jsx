@@ -6,7 +6,7 @@ import './chat.css'
 const messagesCache = {}
 
 export default function Chat({ contact }) {
-    // Inicializar cache para este contacto si no existe
+   
     if (!messagesCache[contact.id]) {
         messagesCache[contact.id] = contact.messages
     }
@@ -16,7 +16,7 @@ export default function Chat({ contact }) {
     const [loading, setLoading] = useState(false)
     const bottomRef = useRef(null)
 
-    // Cuando cambia el contacto, cargar SUS mensajes
+    
     useEffect(() => {
         if (!messagesCache[contact.id]) {
             messagesCache[contact.id] = contact.messages
@@ -40,7 +40,7 @@ export default function Chat({ contact }) {
             created_at: new Date().toISOString(),
         }
 
-        // Actualizar cache y estado
+     
         messagesCache[contact.id] = [...messagesCache[contact.id], userMsg]
         setMessages([...messagesCache[contact.id]])
         setText('')

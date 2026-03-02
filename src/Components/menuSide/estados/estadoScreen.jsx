@@ -95,7 +95,7 @@ export default function EstadosScreen() {
             </header>
 
             <div className="estados_body">
-                {/* Mi estado */}
+                
                 <section className="estados_section">
                     <div className="estados_mine">
                         <div className="estados_mine__avatar_wrap">
@@ -118,7 +118,7 @@ export default function EstadosScreen() {
                     </div>
                 </section>
 
-                {/* No vistos */}
+               
                 {noVistos.length > 0 && (
                     <section className="estados_section">
                         <p className="estados_section__label">Actualizaciones recientes</p>
@@ -139,7 +139,7 @@ export default function EstadosScreen() {
                     </section>
                 )}
 
-                {/* Vistos */}
+               
                 {vistos.length > 0 && (
                     <section className="estados_section">
                         <p className="estados_section__label">Vistos</p>
@@ -161,7 +161,7 @@ export default function EstadosScreen() {
                 )}
             </div>
 
-            {/* FABs */}
+            
             <div className="estados_fabs">
                 <button className="estados_fab estados_fab--text">
                     <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">

@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: row;
     background-color: #f0f2f5;
-    height: 100vh;        /* ← era 100%, cambiado a 100vh */
-    max-height: 100vh;    /* ← nuevo: evita desborde */
-    overflow: hidden;     /* ← nuevo: corta cualquier hijo que se pase */
+    height: 100vh;        
+    max-height: 100vh;    
+    overflow: hidden;     
 }
 
 .home_chat {
@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1;              /* ← ocupa el espacio restante */
+    flex: 1;              
     background-color: #f7f5f3;
     overflow: hidden;
 }

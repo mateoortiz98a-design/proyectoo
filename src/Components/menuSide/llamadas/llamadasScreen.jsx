@@ -2,7 +2,7 @@ import { useState } from 'react'
 import contacts from '../../../data/contactData.js'
 import "./llamadas.css"
 
-// Historial de llamadas basado en los contactos reales
+
 const callHistory = [
     { id: 1, contactId: 1, type: 'entrante', video: false, time: 'Hoy, 10:32' },
     { id: 2, contactId: 2, type: 'perdida',  video: false, time: 'Hoy, 09:14' },
@@ -13,7 +13,7 @@ const callHistory = [
     { id: 7, contactId: 3, type: 'perdida',  video: false, time: 'Sáb, 08:30' },
 ]
 
-// Modal de llamada activa
+
 function CallModal({ contact, video, onClose }) {
     return (
         <div className="llamadas_modal" onClick={onClose}>
@@ -45,7 +45,7 @@ function CallModal({ contact, video, onClose }) {
     )
 }
 
-// Ícono de flecha según tipo
+
 function ArrowIcon({ type }) {
     const color = type === 'perdida' ? '#ff3b30' : '#00a884'
     const rotate = type === 'saliente' ? '180deg' : '0deg'
@@ -59,7 +59,7 @@ function ArrowIcon({ type }) {
 export default function LlamadasScreen() {
     const [calling, setCalling] = useState(null)
 
-    // Enriquecer historial con datos del contacto
+    
     const calls = callHistory.map(call => ({
         ...call,
         contact: contacts.find(c => c.id === call.contactId),
@@ -72,7 +72,7 @@ export default function LlamadasScreen() {
     return (
         <div className="llamadas_screen">
 
-            {/* Header */}
+           
             <header className="llamadas_header">
                 <h1 className="llamadas_header__title">Llamadas</h1>
                 <div className="llamadas_header__actions">
@@ -92,7 +92,7 @@ export default function LlamadasScreen() {
                 </div>
             </header>
 
-            {/* Botón crear enlace */}
+            
             <button className="llamadas_link_btn">
                 <span className="llamadas_link_icon">
                     <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
@@ -105,10 +105,10 @@ export default function LlamadasScreen() {
                 </div>
             </button>
 
-            {/* Etiqueta */}
+            
             <p className="llamadas_section_label">Recientes</p>
 
-            {/* Lista */}
+           
             <ul className="llamadas_list">
                 {calls.map((call, i) => (
                     <li
@@ -152,14 +152,14 @@ export default function LlamadasScreen() {
                 ))}
             </ul>
 
-            {/* FAB nueva llamada */}
+            
             <button className="llamadas_fab" aria-label="Nueva llamada" onClick={() => handleCall(contacts[0], false)}>
                 <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
                     <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/>
                 </svg>
             </button>
 
-            {/* Modal llamada */}
+            
             {calling && (
                 <CallModal
                     contact={calling.contact}

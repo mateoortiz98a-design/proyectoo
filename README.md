@@ -1,16 +1,9 @@
-# React + Vite
+Me costó un poco más de lo que esperaba porque estuve bastante ocupado con el trabajo y no pude dedicarle todo el tiempo que me hubiera gustado.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Utilicé ChatGPT principalmente para agilizar el CSS y el responsive. De todas formas, en la mayoría de los casos terminé ajustando los estilos manualmente para que quedaran como a mí me parecía mejor. La idea fue optimizar tiempo en maquetado para poder enfocarme más en la lógica y el código.
 
-Currently, two official plugins are available:
+También me apoyé en algunos tutoriales para implementar el formulario y resolver ciertos detalles puntuales, intentando siempre entender lo que estaba haciendo y adaptarlo al proyecto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Intenté integrar respuestas con IA en los chats, pero se me complicó más de lo previsto y todavía no logré dejarlo funcionando correctamente, así que lo dejé planteado para terminar de implementarlo cuando lo tenga bien resuelto.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+El proyecto está bastante básico y algunas partes quedaron como placeholders por el poco tiempo disponible, pero la base está lista para seguir escalándola y mejorándola.

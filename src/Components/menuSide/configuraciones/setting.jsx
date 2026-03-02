@@ -79,12 +79,12 @@ export default function SettingsScreen() {
     return (
         <div className="settings_container">
 
-            {/* ── Sidebar ── */}
+            
             <div className="settings_sidebar">
 
                 <h2 className="settings_title">Ajustes</h2>
 
-                {/* Buscador */}
+               
                 <div className="settings_search">
                     <svg className="settings_search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
                         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -92,7 +92,7 @@ export default function SettingsScreen() {
                     <input type="text" placeholder="Buscar en los ajustes" />
                 </div>
 
-                {/* Perfil */}
+                
                 <div className="settings_profile">
                     <img src="https://i.pinimg.com/originals/69/f3/aa/69f3aac6a1f53ab51c8cf248949f4185.jpg?nii=t" alt="Perfil" />
                     <div className="settings_profile__info">
@@ -101,7 +101,7 @@ export default function SettingsScreen() {
                     </div>
                 </div>
 
-                {/* Items de menú */}
+                
                 <nav className="settings_nav">
                     {menuItems.map((item) => (
                         <button
@@ -118,7 +118,7 @@ export default function SettingsScreen() {
                     ))}
                 </nav>
 
-                {/* Cerrar sesión */}
+                
                 <button className="settings_logout">
                     <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
                         <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5-5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
@@ -127,7 +127,7 @@ export default function SettingsScreen() {
                 </button>
             </div>
 
-            {/* ── Panel derecho ── */}
+            
             <div className="settings_content">
                 {section ? (
                     <div className="settings_content__inner">

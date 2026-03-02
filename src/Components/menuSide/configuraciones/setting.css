@@ -1,6 +1,4 @@
-/* ══════════════════════════════════════
-   setting.css — WhatsApp Web Settings
-══════════════════════════════════════ */
+
 
 .settings_container {
     display: flex;
@@ -14,9 +12,7 @@
     min-width: 0;
 }
 
-/* ══════════════════════════════════════
-   SIDEBAR
-══════════════════════════════════════ */
+
 .settings_sidebar {
     width: 420px;
     min-width: 320px;
@@ -41,7 +37,7 @@
     flex-shrink: 0;
 }
 
-/* Buscador */
+
 .settings_search {
     position: relative;
     padding: 4px 16px 10px;
@@ -58,7 +54,7 @@
 }
 
 .settings_search input {
-    width: 100%;
+    width: 85%;
     height: 38px;
     background-color: #f0f2f5;
     border: none;
@@ -73,7 +69,7 @@
 .settings_search input::placeholder { color: #8696a0; }
 .settings_search input:focus { background-color: #e9edef; }
 
-/* Perfil */
+
 .settings_profile {
     display: flex;
     align-items: center;
@@ -114,7 +110,7 @@
     color: #8696a0;
 }
 
-/* Nav */
+
 .settings_nav {
     display: flex;
     flex-direction: column;
@@ -175,7 +171,7 @@
     text-overflow: ellipsis;
 }
 
-/* Cerrar sesión */
+
 .settings_logout {
     all: unset;
     display: flex;
@@ -196,9 +192,7 @@
 .settings_logout:hover { background-color: #fff5f5; }
 .settings_logout svg { color: #f15c6d; flex-shrink: 0; }
 
-/* ══════════════════════════════════════
-   PANEL DERECHO
-══════════════════════════════════════ */
+
 .settings_content {
     flex: 1;
     height: 100%;
@@ -263,25 +257,29 @@
         padding-bottom: 60px;
         box-sizing: border-box;
     }
-
-    /* Sidebar ocupa toda la pantalla */
+    .settings_search input {
+        width: 90%;
+        
+    }
+    
     .settings_sidebar {
+
         width: 100%;
         min-width: unset;
         max-width: unset;
-        height: auto;
+        height: 91%;
         border-right: none;
         border-bottom: 1px solid #e9edef;
         overflow-y: visible;
         flex-shrink: 0;
     }
 
-    /* Ocultar panel derecho en mobile (no hay espacio) */
+    
     .settings_content {
         display: none;
     }
 
-    /* Items más compactos */
+    
     .settings_nav__item {
         padding: 12px 16px;
     }
@@ -309,7 +307,7 @@
         padding: 14px 16px;
     }
 
-    /* Espacio para barra mobile inferior */
+    
     .settings_sidebar {
         padding-bottom: 70px;
     }

@@ -11,7 +11,7 @@ export default function ContactSidebar() {
     return (
         <div className='sidebar' >
             <div className='sidebar_header'>
-                <h2>Whatsapp Clone</h2>
+                <h2>WhatsApp Clone</h2>
             </div>
             <div className='contacts_list'>
                 {

@@ -9,7 +9,7 @@ export default function HomeScreen() {
       <ContactSidebar />
 
       <div className='home_chat'>
-        <h1>Bienvenido a Whatsapp Clone</h1>
+        <h1>Bienvenido a WhatsApp Clone</h1>
         <p>Selecciona un contacto para comenzar a chatear</p>
       </div>
     </div>

@@ -1,5 +1,4 @@
-
-const API_KEY = import.meta.env.VITE_ANTHROPIC_API_KEY
+const API_KEY = import.meta.env.VITE_GROQ_API_KEY
 
 export async function getAIResponse(contact, messages, userMessage) {
     const aiMessages = messages
@@ -11,28 +10,28 @@ export async function getAIResponse(contact, messages, userMessage) {
 
     aiMessages.push({ role: 'user', content: userMessage })
 
-    const response = await fetch('/api/v1/messages', {
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'x-api-key': API_KEY,
-            'anthropic-version': '2023-06-01',
+            'Authorization': `Bearer ${API_KEY}`,
         },
         body: JSON.stringify({
-            model: 'claude-haiku-4-5-20251001',
+            model: 'llama-3.3-70b-versatile',
             max_tokens: 300,
-            system: `Sos ${contact.name}, un contacto de WhatsApp. 
+            messages: [
+                {
+                    role: 'system',
+                    content: `Sos ${contact.name}, un contacto de WhatsApp. 
 Respondé de forma corta y casual como en un chat real.
 Usá el estilo de ${contact.name} — si es Yoda hablá como Yoda, si es Cartman sé sarcástico, etc.
-Máximo 2-3 oraciones por respuesta.`,
-            messages: aiMessages
+Máximo 2-3 oraciones por respuesta.`
+                },
+                ...aiMessages
+            ]
         })
     })
 
     const data = await response.json()
-    return data.content[0].text
+    return data.choices[0].message.content
 }
-
-
-
-

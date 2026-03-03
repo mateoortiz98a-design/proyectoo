@@ -120,7 +120,6 @@ html, body, #root {
     body.chat-open .home_chat_contact {
         transform: translateX(0);
     }
-
     
     .home_chat_header .volver {
         display: flex;          
@@ -130,7 +129,9 @@ html, body, #root {
         color: #00a884;
         text-decoration: none;
     }
-
+.llamadas_fab {display: none !important; }
+.estados_fab--camera {display: none !important; }
+.estados_fab.estados_fab.estados_fab--text {display: none !important; }
     
     .home_chat_header {
         height: 56px;

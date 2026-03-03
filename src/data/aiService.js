@@ -23,7 +23,7 @@ export async function getAIResponse(contact, messages, userMessage) {
                 {
                     role: 'system',
                     content: `Sos ${contact.name}, un contacto de WhatsApp. 
-Respondé de forma corta y casual como en un chat real.
+Respondé de forma corta y casual como en un chat real no tan robotarizado.
 Usá el estilo de ${contact.name} — si es Yoda hablá como Yoda, si es Cartman sé sarcástico, etc.
 Máximo 2-3 oraciones por respuesta.`
                 },
